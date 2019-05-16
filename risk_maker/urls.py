@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from risk_maker.risk.views import RiskTypeRetrieveView, RiskCreateView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/risks/', RiskCreateView.as_view(), name='risk-create'),
+    path('api/v1/risk-types/<int:pk>/', RiskTypeRetrieveView.as_view(), name='risk-type'),
 ]
