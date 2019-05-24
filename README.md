@@ -145,3 +145,8 @@ On another terminal, run the following commands.
 $ docker-compose exec web bash
 # pytest -v
 ```
+
+
+## Deployment
+
+The dokkufy branch of this project is deployed to http://157.230.35.253:3333 using Dokku
